@@ -48,7 +48,7 @@ def main(para):
     accuracyes = []
     acc_var = []
     print("\n***************Start running**************")
-    if args.aggregate_way == "FLClusting":
+    if args.aggregate_way == "FLClustering":
         print("Start pre-training......")
         if args.change == "no":
             for client in clients:
@@ -252,7 +252,7 @@ def main(para):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--aggregate_way", type=str, default="FLClusting", choices=["FedAvg","Krum","FLClusting","α-FedAvg"])
+    parser.add_argument("--aggregate_way", type=str, default="FLClustering", choices=["FedAvg","Krum","FLClustering","α-FedAvg"])
     parser.add_argument("--attack_way", type=str, default="model", choices=["no","model","data"])
     parser.add_argument("--att_rate", type=float, default=0.3,help="Attacker rate of sel_client_nums")
     parser.add_argument("--epoch", type=int, default=100, help="communicate epoch")#100
